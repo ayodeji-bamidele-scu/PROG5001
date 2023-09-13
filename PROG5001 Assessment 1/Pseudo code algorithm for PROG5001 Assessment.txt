@@ -1,0 +1,40 @@
+Algorithm 1: Method to find the highest mark and lowest mark
+
+Function findMaxMark(studentMarks):
+    Assign maxMark to the first element of studentMarks array
+    
+Loop:   For each mark in the studentMarks array:
+        If mark > maxMark:
+            Set maxMark to mark
+            
+    Return maxMark
+
+Function findMinMark(studentMarks):
+    Assign minMark to the first element of studentMarks array
+    
+Loop:   For each mark in the studentMarks array:
+        If mark < minMark:
+            Set minMark to mark
+            
+    Return minMark
+
+
+Algorithm 2: Method to find the mean and standard deviation
+
+Function calculateMeanMark(studentMarks):
+    Assign 0 to sum
+    
+    For each mark in studentMarks:
+        Add mark to sum
+        
+    Return sum divided by the length of studentMarks
+
+Function calculateStandardDeviationMark(studentMarks):
+    Assign 0 to sum 
+    Assign 0 to standardDeviation
+    
+    For each mark in studentMarks:
+        Add mark to sum
+        Add (mark - (sum / length of studentMarks))^2 to standardDeviation
+        
+    Return the square root of (standardDeviation divided by the length of studentMarks)
