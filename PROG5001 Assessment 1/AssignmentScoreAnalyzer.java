@@ -26,14 +26,46 @@ public class AssignmentScoreAnalyzer{
                     }
                 }
             }
-        
+            
        // Calculate and display results
+        double maxMark = findMaxMArk(studentMarks);
+        double minMark = findMinMArk(studentMarks);
         
         System.out.println("Assigment name: " + assignmentName);  // Print assignment name to address F4
-        
+        System.out.println("The Highest Mark is: " + maxMark); // Print Highest Mark
+        System.out.println("The Lowest Mark is: " + minMark); // Print Lowest Mark
+
  
         scanner.close();
     }     
+    
+    // Method to find the highest mark
+    public static double findMaxMArk(double[] studentMarks) {
+        double maxMark = studentMarks[0];
+        
+        for (double mark : studentMarks) {
+            if (mark > maxMark) {
+                    maxMark = mark;
+            }
+        }
+
+        return maxMark;
+    }
+    
+    // Method to find the lowest mark
+    public static double findMinMArk(double[] studentMarks) {
+        double minMark = studentMarks[0];
+        
+        for (double mark : studentMarks) {
+            if (mark < minMark) {
+                    minMark = mark;
+            }
+        }
+
+        return minMark;
+    }
+    
+    
     
     }
         
