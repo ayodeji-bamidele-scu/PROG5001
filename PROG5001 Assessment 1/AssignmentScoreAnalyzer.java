@@ -30,12 +30,15 @@ public class AssignmentScoreAnalyzer{
        // Calculate and display results
         double maxMark = findMaxMArk(studentMarks);
         double minMark = findMinMArk(studentMarks);
-        
+        double meanMark = calculateMeanMark(studentMarks);
+        double standarddeviationMark = calculateStandardDeviationMark(studentMarks);
+
         System.out.println("Assigment name: " + assignmentName);  // Print assignment name to address F4
         System.out.println("The Highest Mark is: " + maxMark); // Print Highest Mark
         System.out.println("The Lowest Mark is: " + minMark); // Print Lowest Mark
-
- 
+        System.out.println("The Mean Mark is: " + meanMark); // Print Mean Mark
+        System.out.println("The Standard deviation of the Marks is: " + standarddeviationMark); // Print Standard Deviation of the Marks
+  
         scanner.close();
     }     
     
@@ -65,7 +68,29 @@ public class AssignmentScoreAnalyzer{
         return minMark;
     }
     
+    // Method to calculate the mean mark
+    public static double calculateMeanMark(double[] studentMarks) {
+        double sum = 0;
+
+        for (double mark : studentMarks) {
+            sum += mark;
+        }
+
+        return sum / studentMarks.length;
+    }
     
+    // Method to calculate the standard deviation
+    public static double calculateStandardDeviationMark(double[] studentMarks) {
+        double sum = 0;
+        double standardDeviation = 0;
+        
+        for (double mark : studentMarks) {
+            sum += mark;
+            standardDeviation += (mark - (sum / studentMarks.length)) * (mark - (sum / studentMarks.length));
+        }
+
+        return Math.sqrt(standardDeviation / studentMarks.length);
+    }
     
     }
         
