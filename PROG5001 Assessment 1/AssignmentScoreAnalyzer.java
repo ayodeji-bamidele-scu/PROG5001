@@ -26,7 +26,14 @@ public class AssignmentScoreAnalyzer{
                     }
                 }
             }
-            // Print assignment name to address F4
-            System.out.println("Assigment name: " + assignmentName);
-        }
+        
+       // Calculate and display results
+        
+        System.out.println("Assigment name: " + assignmentName);  // Print assignment name to address F4
+        
+ 
+        scanner.close();
+    }     
+    
     }
+        

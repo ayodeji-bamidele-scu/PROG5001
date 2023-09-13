@@ -2,4 +2,12 @@
 comment0.target=AssignmentScoreAnalyzer
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=studentMarks
+comment2.target=double\ findMaxMArk(double[])
+comment3.params=studentMarks
+comment3.target=double\ findMinMArk(double[])
+comment4.params=studentMarks
+comment4.target=double\ calculateMeanMark(double[])
+comment5.params=studentMarks
+comment5.target=double\ calculateStandardDeviationMark(double[])
+numComments=6
